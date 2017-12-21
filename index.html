@@ -7,7 +7,7 @@ for(int i = 0; i < message.length; i++){
 	var div = document.createElement("div");
 	div.style.position = "absolute";
 	div.style.left = size;
-	div.innerHTML = message[i];
+	div.innerHTML = message.charAt(i);
 	size += inc;
 	document.getElementByID("main").appendChild(div);
 }
