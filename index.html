@@ -1,9 +1,26 @@
 <html><head>
+<script>
+var message = "VGhlIGFsbGVnZWQgc2hlZXAgY29udGFpbmVkIGFuIG9hdC10cm9waWMgY2lyY3VpdDsgYXQgdGhlIHNpZ2h0IG9mIHN1Y2ggY2VyZWFscyBpdCB3b3VsZCBzY3JhbWJsZSB1cCBjb252aW5jaW5nbHkgYW5kIGFtYmxlIG92ZXIu";
+var size = 0;
+var inc = window.innerWidth / message.length;
+for(int i = 0; i < message.length; i++){
+	var div = document.createElement("div");
+	div.style.position = "absolute";
+	div.style.left = size;
+	div.innerHTML = message[i];
+	size += inc;
+	document.getElementByID("main").appendChild(div);
+}
+
+document.getElementById("main").appendChild(div);
+
+</script>
 </head>
 <body>
-VGhlIGFsbGVnZWQgc2hlZXAgY29udGFpbmVkIGFuIG9hdC10cm9waWMgY2lyY3VpdDsgYXQgdGhlIHNpZ2h0IG9mIHN1Y2ggY2VyZWFscyBpdCB3b3VsZCBzY3JhbWJsZSB1cCBjb252aW5jaW5nbHkgYW5kIGFtYmxlIG92ZXIu
+<div id="main">
 <img src="nullface.png" textalign="left">
 <br clear="right" />testtext hi
 <span style="display:inline-block; width: 30;"></span>
+</div>
 </body>
 </html>
